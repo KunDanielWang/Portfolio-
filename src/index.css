@@ -1,16 +1,23 @@
+/*-------------Global CSS---------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 /*-------------Homepage CSS---------------*/
 .dashboard-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2em;
 }
 
 .heading-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #f4f4f4;
     padding: 10px 0;
     border-radius: 0.5em;
 }
@@ -27,10 +34,83 @@
     border-radius: 0.5em;
 }
 
+.components-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 2em;
+}
+
 /*-------------About Me CSS---------------*/
 .about-me-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2em;
+    gap: 2em;
 }   
+
+/*-------------Experience CSS---------------*/
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+/* Timeline dot stays in center */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 45%;
+}
+
+/* Left side (odd items) */
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 5%;
+}
+
+/* Right side (even items) */
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 5%;
+}
+

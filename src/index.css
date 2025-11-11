@@ -1,11 +1,20 @@
+:root{
+    --text-color: #F5F0ED;
+    --accent-color: #E8949E;
+    --secondary-color: #4A4A4A;
+}
+
 /*-------------Global CSS---------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    
 }
-
+body {
+    background-color: #1A1A1A;
+}
 /*-------------Homepage CSS---------------*/
 .dashboard-container {
     display: flex;
@@ -20,6 +29,7 @@
     width: 100%;
     padding: 10px 0;
     border-radius: 0.5em;
+    color: var(--text-color);
 }
 
 .heading-container div {
@@ -30,7 +40,7 @@
 }
 
 .heading-container div:hover {
-    background-color: #ddd;
+    background-color: var(--accent-color);
     border-radius: 0.5em;
 }
 
@@ -48,6 +58,7 @@
     align-items: center;
     padding: 2em;
     gap: 2em;
+    color: var(--text-color)
 }   
 
 /*-------------Experience CSS---------------*/
@@ -56,7 +67,9 @@
     padding: 20px 0;
     margin: 0 auto;
     width: 80%;
+    color: var(--text-color);
 }
+
 
 .timeline::before {
     content: '';
@@ -74,6 +87,7 @@
     margin-bottom: 40px;
     display: flex;
     align-items: center;
+
 }
 
 /* Timeline dot stays in center */
@@ -83,17 +97,34 @@
     transform: translateX(-50%);
     width: 16px;
     height: 16px;
-    background-color: #007bff;
+    background-color: var(--accent-color);
     border-radius: 50%;
     z-index: 1;
 }
 
 .timeline-content {
-    background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--accent-color);
     width: 45%;
+    background-color: var(--secondary-color);
+    position: relative; 
+
+}
+.timeline-date {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.timeline-content h3 {
+    color: var(--accent-color);
+}
+
+.timeline-content h4 {
+    color: var(--accent-color);
 }
 
 /* Left side (odd items) */
@@ -113,4 +144,3 @@
 .timeline-item:nth-child(even) .timeline-content {
     margin-left: 5%;
 }
-

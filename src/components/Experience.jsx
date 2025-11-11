@@ -6,9 +6,10 @@ const Experience = () => {
                 <div className="timeline-item">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                        <h3>Job Title / Project Title</h3>
-                        <h4>Company / Organization</h4>
                         <p className="timeline-date">Start Date - End Date</p>
+                        <h3>YezKing</h3>
+                        <h4>I am about to bus it up</h4>
+                        <br />
                         <ul>
                             <li>Key responsibility or achievement 1</li>
                             <li>Key responsibility or achievement 2</li>

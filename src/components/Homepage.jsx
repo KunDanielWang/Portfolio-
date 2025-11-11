@@ -10,6 +10,7 @@ const Homepage = () => {
                 <div>Home</div>
                 <div>Projects</div>
                 <div>Experience</div>
+                <div>Skills</div>
                 <div>Contact</div>
             </div>
             <div className="components-container">

@@ -14,6 +14,9 @@ html, body {
   -moz-osx-font-smoothing:grayscale;
 }
 
+/* smooth in-page anchor scrolling */
+html { scroll-behavior: smooth; }
+
 /* center content and constrain width for better mobile scaling */
 .dashboard-container {
   display: flex;
@@ -46,6 +49,7 @@ html, body {
   padding-right: 1.5rem;
 }
 
+.heading-container a,
 .heading-container div {
   flex: 1 1 auto;
   text-align: center;
@@ -53,8 +57,13 @@ html, body {
   cursor: pointer;
   min-width: 0;
   white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
+.heading-container a:hover,
+.heading-container a:focus,
 .heading-container div:hover,
 .heading-container div:focus {
   background-color: #eee;
@@ -69,6 +78,10 @@ html, body {
   gap: 1.5rem;
   width: 100%;
 }
+
+/* ensure anchor jump stops below sticky header */
+:root { --sticky-header-offset: 88px; }
+.scroll-section { scroll-margin-top: var(--sticky-header-offset); }
 
 /*-------------About Me CSS---------------*/
 .about-me-section {
@@ -379,3 +392,18 @@ a:focus, button:focus, .heading-container div:focus {
     transition: none !important;
   }
 }
+
+/*-------------Resume CSS---------------*/
+.resume-section {
+  width: 100%;
+  padding: 1rem;
+}
+.resume-header h2 { margin-bottom: 0.25rem; }
+.resume-header p { margin: 0.25rem 0 0.75rem; color: #555; }
+.resume-header p a { color: inherit; text-decoration: none; }
+.resume-header p a:hover { text-decoration: underline; }
+.resume-section h3 { margin: 0.9rem 0 0.5rem; }
+.resume-section .meta { color: #666; font-size: 0.95rem; margin: 0.2rem 0 0.4rem; }
+.resume-item { margin-bottom: 0.8rem; }
+.resume-section ul { margin: 0.25rem 0 0.9rem 1.25rem; }
+.resume-section li { margin: 0.2rem 0; }

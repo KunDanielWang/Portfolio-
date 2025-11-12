@@ -6,9 +6,9 @@ const Experience = () => {
                 <div className="timeline-item">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                        <p className="timeline-date">Start Date - End Date</p>
-                        <h3>YezKing</h3>
-                        <h4>I am about to bus it up</h4>
+                        <p className="timeline-date">July 2023 - August 2023</p>
+                        <h3>Junior Software Developer</h3>
+                        <h4>Automobile Science Popularization Alliance, Beijing, China</h4>
                         <br />
                         <ul>
                             <li>Designed and developed a remote‑control car prototype using Python socket programming for real‑time data transmission</li>
@@ -23,7 +23,7 @@ const Experience = () => {
                     <div className="timeline-content">
                         <h3>Lifeguard</h3>
                         <h4>PPL Aquatic, Fitness & Spa Group Inc.</h4>
-                        <p className="timeline-date">—</p>
+                        <p className="timeline-date">June 2024 — August 2025</p>
                         <ul>
                             <li>Ensured patron safety; responded quickly to emergencies</li>
                             <li>Administered CPR and first aid in high‑pressure situations</li>

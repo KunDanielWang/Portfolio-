@@ -1,13 +1,14 @@
-// ...existing code...
 import React, { useRef } from 'react'
 import '../index.css'
 import defaultImg from '../assets/dwizzle.png'
+import VIM_World from '../assets/VIM_World.png'
+import Insulin from '../assets/Insulin_Pump.png'
 
 const projects = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A short description of Project One — what it does and why it matters.',
+    title: 'Personal Portfolio Website',
+    description: 'A responsive portfolio built with React and TypeScript, showcasing my projects, skills, and experience in a clean, component-driven design.',
     tech: ['React', 'Vite', 'CSS'],
     image: defaultImg,
     live: '#',
@@ -15,40 +16,22 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Project Two',
-    description: 'A short description of Project Two — a different scope or stack.',
-    tech: ['Node', 'Express', 'MongoDB'],
-    image: defaultImg,
+    title: 'Insulin Project',
+    description: 'A Qt-based insulin pump simulator with a desktop UI to manage profiles, calculate bolus doses, simulate blood glucose with real-time plotting, and log history to a local SQLite database.',
+    tech: ['C++', 'Qt', 'SQLite', 'QCustomPlot'],
+    image: Insulin,
     live: '#',
     repo: '#'
   },
   {
     id: 3,
-    title: 'Project Three',
-    description: 'A short description of Project Three — focus, outcome or link.',
-    tech: ['TypeScript', 'React'],
-    image: defaultImg,
-    live: '#',
+    title: 'VIM World',
+    description: 'A browser-based game that teaches core Vim navigation through text-maze levels.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    image: VIM_World,
+    live: 'https://drafttin.github.io/VimWorld/',
     repo: '#'
   },
-  {
-    id: 4,
-    title: 'Project Four',
-    description: 'Another project to demonstrate scrolling behavior.',
-    tech: ['HTML', 'CSS'],
-    image: defaultImg,
-    live: '#',
-    repo: '#'
-  },
-  {
-    id: 5,
-    title: 'Project Five',
-    description: 'More projects can be added; slide to see them.',
-    tech: ['Python'],
-    image: defaultImg,
-    live: '#',
-    repo: '#'
-  }
 ]
 
 const Projects = () => {
@@ -114,4 +97,3 @@ const Projects = () => {
 }
 
 export default Projects
-// ...existing code...

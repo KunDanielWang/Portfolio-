@@ -25,8 +25,8 @@ const Experience = () => {
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
                         <p className="timeline-date">June 2024 - August 2025</p>
-                        <h3>YezKing</h3>
-                        <h4>I am about to bus it up</h4>
+                        <h3>Lifeguard</h3>
+                        <h4>PPL Aquatic, Fitness & Spa Group Inc.</h4>
                         <br />
                         <ul>
                             <li>Kept patrons safe by monitoring the area closely and responding quickly to emergencies. </li>

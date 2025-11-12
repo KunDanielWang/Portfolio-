@@ -15,6 +15,9 @@
 body {
     background-color: #1A1A1A;
 }
+html {
+  scroll-behavior: smooth;
+}
 /*-------------Homepage CSS---------------*/
 .dashboard-container {
   display: flex;
@@ -26,7 +29,6 @@ body {
   width: 100%;
 }
 
-/* STICKY HEADER - stays at top on scroll */
 .heading-container {
   display: flex;
   justify-content: space-around;
@@ -39,7 +41,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   margin: 0 -1.5rem;
@@ -58,9 +59,10 @@ body {
   text-decoration: none;
   color: inherit;
   display: block;
+  color: var(--text-color);
 }
 
-.heading-container div:hover {
+.heading-container a:hover {
     background-color: var(--accent-color);
     border-radius: 0.5em;
 }
@@ -73,7 +75,6 @@ body {
   width: 100%;
 }
 
-/* ensure anchor jump stops below sticky header */
 :root { --sticky-header-offset: 88px; }
 .scroll-section { scroll-margin-top: var(--sticky-header-offset); }
 
@@ -84,7 +85,6 @@ body {
     align-items: center;
     padding: 2em;
     gap: 2em;
-    color: var(--text-color)
 }   
 
 .about-me-section .text-area {
@@ -98,6 +98,15 @@ body {
   border-radius: 8px;
 }
 
+.text-area h2{
+  color: var(--accent-color);
+}
+.text-area p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
 /*-------------Projects CSS---------------*/
 .projects-section {
   padding: 1.25rem 0.5rem;
@@ -108,6 +117,8 @@ body {
   margin-bottom: 0.75rem;
   font-size: 1.4rem;
   text-align: left;
+  color: var(--accent-color);
+
 }
 
 /* default grid fallback */
@@ -126,6 +137,7 @@ body {
   flex-direction: column;
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   transition: transform 180ms ease, box-shadow 180ms ease;
+  border-color: var(--accent-color);
 }
 
 .project-card:focus-within,
@@ -133,6 +145,7 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
+
 
 /* images */
 .project-image {
@@ -158,16 +171,19 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   flex: 1;
+  background-color: var(--secondary-color);
+
 }
 
 .project-body h3 {
   margin: 0;
   font-size: 1.05rem;
+  color: var(--accent-color);
 }
 
 .project-body p {
   margin: 0;
-  color: #444;
+  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -202,6 +218,7 @@ body {
   display: inline-block;
   background: rgba(3,102,214,0.06);
 }
+
 
 /* focus styles */
 a:focus, button:focus, .heading-container div:focus {
@@ -246,37 +263,10 @@ a:focus, button:focus, .heading-container div:focus {
   flex-direction: column;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0,0,0,0.06);
-  color: #222;
-  font-size: 20px;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition: background 150ms ease, transform 150ms ease;
-  backdrop-filter: blur(4px);
-}
-.carousel-btn:hover { background: rgba(0,0,0,0.09); transform: translateY(-50%) scale(1.03); }
-.carousel-btn:active { transform: translateY(-50%) scale(0.98); }
-.carousel-btn:focus { outline: 3px solid rgba(3,102,214,0.18); outline-offset: 3px; }
 
-.carousel-btn.prev { left: 6px; }
-.carousel-btn.next { right: 6px; }
+.carousel-item { flex: 0 0 calc(50% - 0.66rem); }
+.carousel-item { flex: 0 0 calc(33.333% - 0.66rem); }
 
-@media (min-width: 600px) {
-  .carousel-item { flex: 0 0 calc(50% - 0.66rem); }
-}
-@media (min-width: 992px) {
-  .carousel-item { flex: 0 0 calc(33.333% - 0.66rem); }
-}
 
 .projects-track:focus { outline: none; }
 
@@ -288,7 +278,9 @@ a:focus, button:focus, .heading-container div:focus {
     width: 80%;
     color: var(--text-color);
 }
-
+.experience-container h2 {
+  color: var(--accent-color);
+}
 
 .timeline::before {
     content: '';
@@ -309,7 +301,6 @@ a:focus, button:focus, .heading-container div:focus {
 
 }
 
-/* Timeline dot stays in center */
 .timeline-dot {
     position: absolute;
     left: 50%;
@@ -346,7 +337,6 @@ a:focus, button:focus, .heading-container div:focus {
     color: var(--accent-color);
 }
 
-/* Left side (odd items) */
 .timeline-item:nth-child(odd) {
     justify-content: flex-start;
 }
@@ -355,11 +345,31 @@ a:focus, button:focus, .heading-container div:focus {
     margin-right: 5%;
 }
 
-/* Right side (even items) */
 .timeline-item:nth-child(even) {
     justify-content: flex-end;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
     margin-left: 5%;
+}
+
+/*-------------Skills Section---------------*/
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+}
+.skills-container h1 {
+  color: var(--accent-color);
+}
+
+.skills-icons {
+  display: flex;
+  gap: 1em;  
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }

@@ -49,13 +49,6 @@ const Projects = () => {
       <h2>My Projects</h2>
 
       <div className="projects-carousel">
-        <button
-          className="carousel-btn prev"
-          onClick={() => scroll('prev')}
-          aria-label="Previous projects"
-        >
-          ‹
-        </button>
 
         <div className="projects-track" ref={trackRef} tabIndex={0} role="list">
           {projects.map(p => (
@@ -83,14 +76,6 @@ const Projects = () => {
             </article>
           ))}
         </div>
-
-        <button
-          className="carousel-btn next"
-          onClick={() => scroll('next')}
-          aria-label="Next projects"
-        >
-          ›
-        </button>
       </div>
     </section>
   )

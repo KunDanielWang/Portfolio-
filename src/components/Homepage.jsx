@@ -3,7 +3,6 @@ import AboutMe from "./Aboutme"
 import Experience from "./Experience"
 import Skills from "./Skills"
 import Contact from "./Contact"
-import Resume from "./Resume"
 
 const Homepage = () => {
     return (
@@ -28,9 +27,6 @@ const Homepage = () => {
                 </section>
                 <section id="skills" className="scroll-section" aria-label="Skills">
                     <Skills />
-                </section>
-                <section id="resume" className="scroll-section" aria-label="Resume">
-                    <Resume />
                 </section>
                 <section id="contact" className="scroll-section" aria-label="Contact">
                     <Contact />

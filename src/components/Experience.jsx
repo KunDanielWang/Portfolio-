@@ -1,13 +1,15 @@
 const Experience = () => {
     return (
         <div className="experience-container">
-            <h2>Experience</h2>
+            <h1>Experience</h1>
             <div className="timeline">
                 <div className="timeline-item">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                        <p className="timeline-date">July 2023 - August 2023</p>
-                        <h3>Junior Software Developer</h3>
+                        <div className="card-heading">
+                            <h3>Junior Software Developer</h3>
+                            <p className="timeline-date">July 2023 - August 2023</p>
+                        </div>
                         <h4>Automobile Science Popularization Alliance, Beijing, China</h4>
                         <br />
                         <ul>
@@ -24,8 +26,10 @@ const Experience = () => {
                 <div className="timeline-item">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content">
-                        <p className="timeline-date">June 2024 - August 2025</p>
-                        <h3>Lifeguard</h3>
+                        <div className="card-heading">
+                            <h3>Lifeguard</h3>
+                            <p className="timeline-date">July 2023 - August 2023</p>
+                        </div>
                         <h4>PPL Aquatic, Fitness & Spa Group Inc.</h4>
                         <br />
                         <ul>

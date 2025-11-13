@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import '../index.css'
-import defaultImg from '../assets/dwizzle.png'
+import defaultImg from '../assets/proper_dwizzle.jpg'
 import VIM_World from '../assets/VIM_World.png'
 import Insulin from '../assets/Insulin_Pump.png'
 

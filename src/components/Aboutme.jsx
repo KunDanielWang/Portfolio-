@@ -1,3 +1,4 @@
+import defaultImg from '../assets/proper_dwizzle.jpg'
 const AboutMe = () => {
     return (
         <div className="about-me-section">
@@ -6,7 +7,7 @@ const AboutMe = () => {
                 <p>Hi, I'm Kun Wang a fourth‑year Computer Science student with a strong foundation in software engineering and web development.</p>
             </div>
             <div className="image-area">
-                <img src="/src/assets/proper_dwizzle.jpg" alt="Profile" />
+                <img src={defaultImg} alt="Profile" />
             </div>
         </div>
     )

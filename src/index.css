@@ -407,7 +407,7 @@ button:focus,
 
 }
 
-@media (width <= 500px){
+@media (width <=500px) {
   .timeline {
     position: relative;
     padding: 20px 0;
@@ -452,6 +452,7 @@ button:focus,
     box-shadow: 0 2px 4px var(--accent-color);
     width: 100%;
     background-color: var(--secondary-color);
+    transform: translateX(25%);
     position: relative;
 
   }
@@ -461,7 +462,7 @@ button:focus,
     color: #bbb;
   }
 
-  
+
   .timeline-content h3 {
     color: var(--accent-color);
   }
@@ -469,6 +470,27 @@ button:focus,
   .timeline-content h4 {
     color: var(--accent-color);
   }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    transform: translateX(-350%);
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+  }
+
+    .timeline-dot {
+    position: absolute;
+    transform: translateX(-85%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
 }
 
 
